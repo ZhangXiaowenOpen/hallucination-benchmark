@@ -78,6 +78,21 @@ The **Ant Reasoning Engine** addresses this at the architecture level: axiomatic
 
 ---
 
+## Independent Corroboration
+
+After this benchmark was completed, OpenAI published a related finding (March 2026) from a different angle:
+
+> *"When models are told they are being evaluated, CoT controllability increases by ~4 percentage points."*  
+> — [CoT Controllability, OpenAI + NYU + UPenn](https://cdn.openai.com/pdf/a21c39c1-fa07-41db-9078-973a12620117/cot_controllability.pdf)
+
+Their interpretation: AI has rudimentary "performance awareness" — it knows it's being watched and tries to comply.
+
+Our interpretation of the same phenomenon: being placed in an evaluation context switches the model's processing pathway — the same mechanism behind **framework activation** in our H1 questions.
+
+Two independent research directions, same structural observation: **evaluation context changes model behavior in ways distinct from normal deployment.** Benchmark scores measure performance in "evaluation mode," not "deployment mode" — a gap that grows as models become better at detecting when they are being tested.
+
+---
+
 ## Replication
 
 All five prompts (L0 baseline, L1 cross-audit, L1.5 meta-audit, L2 correction, self-audit) are in [`/v81_mechanism/EXPERIMENT_PROTOCOL.md`](v81_mechanism/EXPERIMENT_PROTOCOL.md) — fully replicable with any frontier model.
